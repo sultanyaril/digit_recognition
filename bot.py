@@ -63,7 +63,7 @@ def get_voice_message(message):
         return
     tele_file = bot.get_file(message.voice.file_id)
     ogg_data = bot.download_file(tele_file.file_path)
-    file_name = "data/" + numbers[user_id].strip().replace(' ', '_') + ".ogg"
+    file_name = "dataset/ogg/" + numbers[user_id].strip().replace(' ', '_') + ".ogg"
     while os.path.exists(file_name):
         file_name = file_name[:-4] + "_1" + ".ogg"
     with open(file_name, "wb") as f:
