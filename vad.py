@@ -147,6 +147,6 @@ if __name__ == "__main__":
     assert len(digits) == len(segments), "Bad threshold"
 
     max_duration_sec = get_max_duration(segments, sample_rate, segment_hop_sec)
-    assert max_duration_sec <= 0.7, f"max_duration_sec={max_duration_sec:.3f}"
+    assert max_duration_sec <= 0.6, f"max_duration_sec={max_duration_sec:.3f}"
 
     split_and_save(digits, segments, fname, audio, segment_hop_sec, output_wav_directory)
