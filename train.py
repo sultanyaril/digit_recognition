@@ -42,8 +42,8 @@ for audio, label in zip(audios, labels):
 
 features_train, features_test, labels_train, labels_test = train_test_split(features_flatten, labels_flatten, random_state=1755)
 
-model = RandomForestClassifier(max_depth=5, n_estimators=10, max_features=1)
-model = MLPClassifier(hidden_layer_sizes=(100, 75, 50), )
+model = RandomForestClassifier(max_depth=10, n_estimators=10, max_features=1)
+#model = MLPClassifier(hidden_layer_sizes=(100, 75, 50), )
 model.fit(X=features_train, y=labels_train)
 
 import pickle
